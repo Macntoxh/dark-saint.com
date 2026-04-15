@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <script src="js/auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Black Saint | Official Website</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Manifest (optional) -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -12,43 +21,40 @@
     gtag('config', 'G-XXXXXXXXXX');
   </script>
 
+  <!-- Firebase (ONLY ONE VERSION - MODULE) -->
   <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-analytics.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-analytics.js";
 
-  const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID",
-    measurementId: "YOUR_MEASUREMENT_ID"
-  };
+    const firebaseConfig = {
+      apiKey: "YOUR_REAL_API_KEY",
+      authDomain: "YOUR_REAL_AUTH_DOMAIN",
+      projectId: "YOUR_REAL_PROJECT_ID",
+      storageBucket: "YOUR_REAL_STORAGE_BUCKET",
+      messagingSenderId: "YOUR_REAL_SENDER_ID",
+      appId: "YOUR_REAL_APP_ID",
+      measurementId: "YOUR_REAL_MEASUREMENT_ID"
+    };
 
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
-  
-  <link rel="manifest" href="manifest.json">
-  <title>Black Saint | Official Website</title>
-  <link rel="stylesheet" href="css/style.css">
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="logo"><b>BLACK SAINT</b></div>
 
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="music.html">Music</a>
-    <a href="albums.html">Albums</a>
+    <a href="album.html">Albums</a> <!-- FIXED -->
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- ONLY ONE AUTH SECTION -->
   <div class="auth-buttons">
     <button onclick="openLogin()">Login</button>
     <button onclick="openSignup()">Sign Up</button>
@@ -136,7 +142,8 @@
   </div>
 </div>
 
-<!-- JS -->
+<!-- JS (LOAD LAST) -->
+<script src="js/auth.js"></script>
 <script src="js/main.js"></script>
 
 </body>
