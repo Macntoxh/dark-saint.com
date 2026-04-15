@@ -1,1 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="js/auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_AUTH_DOMAIN",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_STORAGE_BUCKET",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID",
+    measurementId: "YOUR_MEASUREMENT_ID"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+  
+  <link rel="manifest" href="manifest.json">
+  <title>Black Saint | Official Website</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+  <div class="logo"><b>BLACK SAINT</b></div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="music.html">Music</a>
+    <a href="albums.html">Albums</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ONLY ONE AUTH SECTION -->
+  <div class="auth-buttons">
+    <button onclick="openLogin()">Login</button>
+    <button onclick="openSignup()">Sign Up</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>BLACK SAINT</h1>
+    <p>Dark sound. Real emotion. Pure experience.</p>
+    <button class="btn" onclick="location.href='music.html'">
+      Listen Now
+    </button>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <h2>About The Artist</h2>
+  <p>
+    Black Saint is an independent music artist creating cinematic,
+    emotional and afro-inspired sound experiences for the world.
+  </p>
+</section>
+
+<!-- STATS -->
+<section class="section">
+  <h2>Stats</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>12+</h3>
+      <p>Songs</p>
+    </div>
+    <div class="card">
+      <h3>100K+</h3>
+      <p>Listeners</p>
+    </div>
+    <div class="card">
+      <h3>5M+</h3>
+      <p>Streams</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section class="section">
+  <h2>Featured Music</h2>
+  <div class="grid">
+    <div class="card"><h3>Shadow Dreams</h3></div>
+    <div class="card"><h3>Nocturnal Rise</h3></div>
+    <div class="card"><h3>Saint Mode</h3></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Black Saint. All rights reserved.
+</footer>
+
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeLogin()">&times;</span>
+    <h2>Login</h2>
+
+    <input type="email" placeholder="Email"><br><br>
+    <input type="password" placeholder="Password"><br><br>
+
+    <button>Login</button>
+  </div>
+</div>
+
+<!-- SIGNUP MODAL -->
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeSignup()">&times;</span>
+    <h2>Sign Up</h2>
+
+    <input type="text" placeholder="Full Name"><br><br>
+    <input type="email" placeholder="Email"><br><br>
+    <input type="password" placeholder="Password"><br><br>
+
+    <button>Create Account</button>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
