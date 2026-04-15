@@ -1,0 +1,17 @@
+<section class="section">
+  <h2>Contact Black Saint</h2>
+
+  <form onsubmit="sendMessage(event)">
+    <input type="text" placeholder="Your Name" required><br><br>
+    <input type="email" placeholder="Your Email" required><br><br>
+    <textarea placeholder="Your Message" required></textarea><br><br>
+    <button class="btn">Send Message</button>
+  </form>
+</section>
+
+<script>
+function sendMessage(e){
+  e.preventDefault();
+  alert("Message sent! Black Saint will contact you soon.");
+}
+</script>

@@ -1,0 +1,409 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: rgba(0,0,0,0.8);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ff004c;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background: linear-gradient(
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.9)
+    ),
+    url("../images/1.jpg") center/cover no-repeat;
+}
+
+.hero h1 {
+  font-size: 65px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px rgba(255,0,76,0.4);
+}
+
+.hero h1 {
+  font-size: 60px;
+  color: #ff004c;
+  letter-spacing: 3px;
+}
+
+.hero p {
+  color: #ccc;
+  margin: 10px 0;
+}
+
+.btn {
+  padding: 12px 20px;
+  background: #ff004c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 70px 10%;
+  text-align: center;
+}
+
+.section h2 {
+  color: #ff004c;
+  margin-bottom: 20px;
+}
+
+/* GRID SYSTEM */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* CARDS */
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(255,0,76,0.2);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #888;
+}
+
+/* =========================
+   📱 RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+}
+
+/* Navbar layout */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+/* Nav links */
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* Auth buttons */
+.auth-buttons a {
+  margin-left: 10px;
+  padding: 6px 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Login style */
+.login-btn {
+  color: white;
+}
+
+/* Sign Up highlight */
+.signup-btn {
+  background-color: #ff0000; /* or match your theme */
+  color: white;
+}
+
+/* NAVBAR FIX */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* BUTTONS */
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* MODAL BACKGROUND */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(5px);
+}
+
+/* MODAL BOX */
+.modal-content {
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  color: white;
+  width: 320px;
+  margin: 8% auto;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+/* INPUTS */
+.modal-content input {
+  width: 90%;
+  padding: 10px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background: #222;
+  color: white;
+}
+
+/* BUTTON */
+.modal-content button {
+  margin-top: 15px;
+  padding: 10px;
+  width: 95%;
+  border: none;
+  border-radius: 6px;
+  background: #ff0000;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* CLOSE BUTTON */
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Login */
+.auth-buttons button:first-child {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+/* Sign Up */
+.auth-buttons button:last-child {
+  background: #ff0000;
+  color: white;
+}
+
+/* MOBILE FIRST BASE */
+body {
+  font-size: 16px;
+}
+
+/* FLEX NAV FOR MOBILE */
+.navbar {
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* GRID FIX */
+.grid {
+  grid-template-columns: 1fr;
+}
+
+/* BUTTON FULL WIDTH ON MOBILE */
+.btn {
+  width: 100%;
+}
+
+/* TABLET */
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .navbar {
+    flex-direction: row;
+  }
+}
+
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  cursor: pointer;
+}
+
+.player {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #111;
+  padding: 10px;
+}
+
+{
+  "name": "Black Saint",
+  "short_name": "BlackSaint",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#000",
+  "theme_color": "#ff004c",
+  "icons": []
+}
+
+/* PLAYER (APP STYLE) */
+.player {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #111;
+  padding: 12px;
+  text-align: center;
+  border-top: 1px solid #222;
+}
+
+.player h4 {
+  margin-bottom: 8px;
+}
+
+.controls button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* PREVENT CONTENT HIDDEN */
+body {
+  padding-bottom: 100px;
+}
+
+/* BUTTON EFFECT */
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}

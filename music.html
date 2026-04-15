@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music - Black Saint</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo"><b>BLACK SAINT</b></div>
+</nav>
+
+<section class="section">
+  <h2>My Music</h2>
+  <div id="musicContainer" class="grid"></div>
+</section>
+
+<!-- PLAYER -->
+<div class="player">
+  <h4 id="nowPlaying">No track playing</h4>
+  <audio id="audioPlayer"></audio>
+
+  <div class="controls">
+    <button onclick="prevTrack()">⏮</button>
+    <button onclick="playPause()">⏯</button>
+    <button onclick="nextTrack()">⏭</button>
+  </div>
+</div>
+
+<script src="js/tracks.js"></script>
+<script src="js/player.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
